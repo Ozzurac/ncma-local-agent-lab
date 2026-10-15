@@ -82,4 +82,6 @@ The Unsloth Desktop, Codex and Claude runtimes are **future backend or harness i
 
 This is an explicit, sanitized publication: no model weights, GGUF, credentials, host binaries, private runtime caches or raw machine logs. The synthetic oracle is published to reproduce the evaluation but was not available to the model during the original experiment.
 
+See the [original source provenance](docs/PROVENANCE.md) and [canonical Git-object manifest](PUBLICATION_MANIFEST.json) for reproducible publication integrity.
+
 License: MIT.

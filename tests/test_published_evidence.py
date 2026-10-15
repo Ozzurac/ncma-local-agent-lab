@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import json
 import sys
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -137,6 +138,18 @@ class TestPublishedEvidence(unittest.TestCase):
         skills=list((ROOT/"skills").rglob("SKILL.md"))
         self.assertGreaterEqual(len(skills),4)
 
+    def test_publication_manifest_matches_committed_git_blobs(self):
+        if not (ROOT/".git").is_dir():
+            self.skipTest("Git checkout required to verify canonical blob bytes")
+        manifest=json.loads((ROOT/"PUBLICATION_MANIFEST.json").read_text("utf-8"))
+        self.assertEqual(manifest["schema"],"ncma-public-allowlist-v1")
+        self.assertGreaterEqual(len(manifest["files"]),110)
+        for item in manifest["files"]:
+            result=subprocess.run(["git","show",":"+item["path"]],
+                                  cwd=ROOT,capture_output=True,check=True)
+            self.assertEqual(len(result.stdout),item["bytes"],msg=item["path"])
+            actual=hashlib.sha256(result.stdout).hexdigest().upper()
+            self.assertEqual(actual,item["sha256"],msg=item["path"])
     def test_models_and_execution_binaries_are_excluded(self):
         forbidden={".gguf",".safetensors",".onnx",".exe",".dll",".pt",".ckpt",".pfx",".pem"}
         excluded={".git","__pycache__",".venv","node_modules","generated","runs"}
