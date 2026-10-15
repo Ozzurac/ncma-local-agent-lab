@@ -17,5 +17,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Verify public evidence without model downloads
         run: python -m unittest discover -s tests -v
+      - name: Scan public export for secrets and unapproved files
+        run: python scripts/scan_publication.py
       - name: Compile portable Python modules
         run: python -m compileall -q src experiments/g3
