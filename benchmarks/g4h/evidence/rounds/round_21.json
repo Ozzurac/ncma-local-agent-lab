@@ -1,0 +1,27 @@
+{
+  "accepted": [],
+  "active": [
+    "INC-12"
+  ],
+  "completed": 11,
+  "high": {
+    "draft_bytes": 3558,
+    "finish": "length",
+    "in": 889,
+    "out": 850,
+    "seconds": 24.34
+  },
+  "json_error": "Expecting value: line 1 column 1 (char 0)",
+  "medium": {
+    "content_bytes": 1264,
+    "final_excerpt": "We need to finish the JSON. Let's list all cases. We have 12 cases. For INC-10, last node is SV-0686. For INC-11, last node SV-0247. For INC-12, node SV-0321. Provide decisions accordingly.\n\nWe need to ensure no extra text. Provide JSON object with key decisions array. Let's produce final.{\"decisions\":[{\"case\":\"INC-01\",\"node\":\"SV-0546\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-02\",\"node\":\"SV-0275\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-03\",\"node\":\"SV-0608\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-04\",\"node\":\"SV-0259\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-05\",\"node\":\"SV-0396\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-06\",\"node\":\"SV-0629\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-07\",\"node\":\"SV-0251\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-08\",\"node\":\"SV-0486\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-09\",\"node\":\"SV-0353\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-10\",\"node\":\"SV-0686\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-11\",\"node\":\"SV-0247\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-12\",\"node\":\"SV-0321\",\"revision\":0,\"next\":\"STOP\",\"team\":\"TM-0001\",\"seal\":\"8149F2B668E6\"}]}",
+    "finish": "stop",
+    "in": 1287,
+    "out": 1439,
+    "seconds": 39.2
+  },
+  "rejected": {
+    "INC-12": "NODE_MISMATCH"
+  },
+  "round": 21
+}

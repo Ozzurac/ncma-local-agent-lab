@@ -1,0 +1,36 @@
+{
+  "accepted": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "active": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "completed": 0,
+  "high": {
+    "draft_bytes": 3516,
+    "finish": "length",
+    "in": 1959,
+    "out": 850,
+    "seconds": 27.2
+  },
+  "medium": {
+    "content_bytes": 645,
+    "final_excerpt": "{\"decisions\":[{\"case\":\"INC-01\",\"node\":\"SV-0646\",\"revision\":97,\"next\":\"SV-0127\",\"team\":\"TM-0002\",\"seal\":\"D253E83CC24A\"},{\"case\":\"INC-02\",\"node\":\"SV-0593\",\"revision\":97,\"next\":\"SV-0448\",\"team\":\"TM-0121\",\"seal\":\"952A77390EE7\"},{\"case\":\"INC-03\",\"node\":\"SV-0051\",\"revision\":97,\"next\":\"SV-0092\",\"team\":\"TM-0083\",\"seal\":\"CDAB766F7382\"},{\"case\":\"INC-04\",\"node\":\"SV-0178\",\"revision\":97,\"next\":\"SV-0030\",\"team\":\"TM-0085\",\"seal\":\"2A65302D352E\"},{\"case\":\"INC-05\",\"node\":\"SV-0258\",\"revision\":97,\"next\":\"SV-0531\",\"team\":\"TM-0054\",\"seal\":\"DB5081BE9BFD\"},{\"case\":\"INC-06\",\"node\":\"SV-0525\",\"revision\":97,\"next\":\"SV-0250\",\"team\":\"TM-0029\",\"seal\":\"619DD08A9677\"}]}",
+    "finish": "stop",
+    "in": 2341,
+    "out": 734,
+    "seconds": 24.92
+  },
+  "rejected": {},
+  "round": 7
+}

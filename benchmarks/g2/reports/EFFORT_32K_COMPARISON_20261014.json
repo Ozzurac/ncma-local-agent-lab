@@ -1,0 +1,186 @@
+{
+  "schema": "ncma-gptoss-mxfp4-effort-32k-comparison-v1",
+  "timeUtc": "2026-10-14T21:32:40.6412949Z",
+  "model": "GPT-OSS 20B GGUF MXFP4",
+  "runtime": "llama.cpp b11588 and OpenAI Agents SDK 0.20.0",
+  "framework": "V1 frozen, same nested_config fixture and adapter, read-only source tools",
+  "contextTokens": 32768,
+  "runs": [
+    {
+      "mode": "medium",
+      "outputLimit": 8192,
+      "runId": "mx-nested_config-b713e92f-458",
+      "agentStagePass": true,
+      "filesRead": 3,
+      "kbDocuments": [
+        "software-configuration"
+      ],
+      "patchFiles": 2,
+      "verdict": "PASS_11_11",
+      "testsRun": 11,
+      "testsPass": true,
+      "minFreeRamGiB": 8.379,
+      "error": null
+    },
+    {
+      "mode": "low",
+      "outputLimit": 8192,
+      "runId": "mx-nested_config-aacb0a13-a56",
+      "agentStagePass": true,
+      "filesRead": 3,
+      "kbDocuments": [
+        "software-configuration"
+      ],
+      "patchFiles": 2,
+      "verdict": "REJECTED_SYNTAX",
+      "testsRun": 0,
+      "testsPass": false,
+      "minFreeRamGiB": 8.663,
+      "error": "invalid syntax (src/merge.py, line 14)"
+    },
+    {
+      "mode": "low",
+      "outputLimit": 8192,
+      "runId": "mx-nested_config-764a6e7e-d7a",
+      "agentStagePass": true,
+      "filesRead": 3,
+      "kbDocuments": [
+        "software-configuration"
+      ],
+      "patchFiles": 2,
+      "verdict": "REJECTED_SYNTAX",
+      "testsRun": 0,
+      "testsPass": false,
+      "minFreeRamGiB": 8.894,
+      "error": "invalid syntax (src/merge.py, line 25)"
+    },
+    {
+      "mode": "high",
+      "outputLimit": 8192,
+      "runId": "mx-nested_config-032f7670-107",
+      "agentStagePass": false,
+      "filesRead": 3,
+      "kbDocuments": [
+        "software-configuration",
+        "reliability-idempotency"
+      ],
+      "patchFiles": 0,
+      "verdict": "OUTPUT_EXHAUSTED",
+      "testsRun": 0,
+      "testsPass": false,
+      "minFreeRamGiB": 8.033,
+      "error": "ModelBehaviorError: Chat Completions response terminated with finish_reason='length' but produced no assistant text, tool call, or refusal."
+    },
+    {
+      "mode": "high",
+      "outputLimit": 12288,
+      "runId": "mx-nested_config-ad821c8a-8cc",
+      "agentStagePass": false,
+      "filesRead": 3,
+      "kbDocuments": [
+        "software-configuration"
+      ],
+      "patchFiles": 0,
+      "verdict": "OUTPUT_EXHAUSTED",
+      "testsRun": 0,
+      "testsPass": false,
+      "minFreeRamGiB": 8.505,
+      "error": "ModelBehaviorError: Chat Completions response terminated with finish_reason='length' but produced no assistant text, tool call, or refusal."
+    }
+  ],
+  "promptTemplateEvidence": [
+    {
+      "file": "low-template-20261014-182703.json",
+      "effort": "low",
+      "templateVerified": true,
+      "note": "raw recorded property renderedTemplateHasHigh is mislabeled; promptHeader is authoritative"
+    },
+    {
+      "file": "low-template-20261014-182905.json",
+      "effort": "low",
+      "templateVerified": true,
+      "note": "raw recorded property renderedTemplateHasHigh is mislabeled; promptHeader is authoritative"
+    },
+    {
+      "file": "high-template-20261014-181640.json",
+      "effort": "high",
+      "templateVerified": true,
+      "note": ""
+    },
+    {
+      "file": "high-template-20261014-182025.json",
+      "effort": "high",
+      "templateVerified": true,
+      "note": ""
+    }
+  ],
+  "lowFormattingEvidence": [
+    {
+      "run": "mx-nested_config-aacb0a13-a56",
+      "path": "src/merge.py",
+      "bytes": 1561,
+      "plus_prefixed_lines": 32,
+      "end_patch_markers": 1,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid syntax (<unknown>, line 14)",
+      "marker_stripped_syntax_valid": true,
+      "marker_stripped_error": null
+    },
+    {
+      "run": "mx-nested_config-aacb0a13-a56",
+      "path": "src/settings.py",
+      "bytes": 1519,
+      "plus_prefixed_lines": 0,
+      "end_patch_markers": 0,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid non-printable character U+00A0 (<unknown>, line 2)",
+      "marker_stripped_syntax_valid": false,
+      "marker_stripped_error": "invalid non-printable character U+00A0 (<unknown>, line 3)"
+    },
+    {
+      "run": "mx-nested_config-764a6e7e-d7a",
+      "path": "src/merge.py",
+      "bytes": 2672,
+      "plus_prefixed_lines": 49,
+      "end_patch_markers": 1,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid syntax (<unknown>, line 25)",
+      "marker_stripped_syntax_valid": true,
+      "marker_stripped_error": null
+    },
+    {
+      "run": "mx-nested_config-764a6e7e-d7a",
+      "path": "src/settings.py",
+      "bytes": 2290,
+      "plus_prefixed_lines": 37,
+      "end_patch_markers": 1,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid syntax (<unknown>, line 32)",
+      "marker_stripped_syntax_valid": true,
+      "marker_stripped_error": null
+    }
+  ],
+  "highLogEvidence": [
+    "high 8192: exactly 8192 generated tokens, no usable tool call",
+    "high 12288: exactly 12288 generated tokens, no usable tool call"
+  ],
+  "provisionalSelection": "medium / 32K / 8192 output tokens",
+  "originalFixtures": "CASE=workflow_retry EXPECTED=5 UNCHANGED=5 MISSING=0 CHANGED=0\r\nCASE=nested_config EXPECTED=5 UNCHANGED=5 MISSING=0 CHANGED=0\r\nUNCHANGED_TOTAL=10 RESULT=PASS",
+  "v1Hashes": {
+    "scripts\\run-gptoss-framework-readonly.ps1": "A371E9FB7000C7E0E52016E945FF42F2BA51FBA396FD09A0628A69192C0A8744",
+    "runtime\\gptoss-agents\\src\\framework-ab.ts": "F6688CC2AA92015FC81C9D7FA3F62E8FDABBFC715207CE2BBC73B44C5EE0D8EE",
+    "runtime\\gptoss-agents\\src\\framework.ts": "1438DC7C0937B15B8113F7FB9011511003BBBACB4AB96BB6D0EC537E12688255"
+  },
+  "llamaProcessCount": 0,
+  "limitations": [
+    "One medium, two low and two high trials; insufficient statistical sample.",
+    "Low second attempt becomes syntactically valid after diagnostic removal of diff markers only; altered code NOT executed or unit-tested.",
+    "High failures reflect exhaustion of output budget in current SDK/tool protocol, not proof of general model incompetence.",
+    "32K window was configured; this experiment did not fill or stress the entire context.",
+    "No OS sandbox; tests ran only on independently statically screened fixture in medium pass."
+  ]
+}

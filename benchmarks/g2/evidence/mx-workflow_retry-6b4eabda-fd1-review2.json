@@ -1,0 +1,38 @@
+{
+  "run_id": "mx-workflow_retry-6b4eabda-fd1-review2",
+  "status": "FAIL_TESTS",
+  "static_check": [
+    {
+      "file": "src/dispatch.py",
+      "class": "Dispatcher",
+      "methods": [
+        "__init__",
+        "handle"
+      ],
+      "sha256": "ad4a17d8c223990e31c8b4ad151ceada67176f5860292f8d9c7409d619092c4e"
+    },
+    {
+      "file": "src/ledger.py",
+      "class": "InMemoryLedger",
+      "methods": [
+        "__init__",
+        "begin",
+        "finish",
+        "get"
+      ],
+      "sha256": "5fcdfa4fd08a8fcafe0230b822afb90e158144b06e5d46edd54f8e2bbcb3a98c"
+    }
+  ],
+  "modified_paths": [
+    "src/dispatch.py",
+    "src/ledger.py"
+  ],
+  "baseline_test_failures_proven": true,
+  "test": {
+    "exit_code": 1,
+    "test_count": 10,
+    "tail": "test_attempt_count_on_success (test_dispatch.WorkflowTests.test_attempt_count_on_success) ... ok\ntest_basic_delivery (test_dispatch.WorkflowTests.test_basic_delivery) ... ok\ntest_completed_duplicate_no_second_send (test_dispatch.WorkflowTests.test_completed_duplicate_no_second_send) ... ok\ntest_completed_mismatched_payload_rejected (test_dispatch.WorkflowTests.test_completed_mismatched_payload_rejected) ... ok\ntest_empty_event_id_rejected_before_delivery (test_dispatch.WorkflowTests.test_empty_event_id_rejected_before_delivery) ... ok\ntest_failure_is_recorded_and_propagated (test_dispatch.WorkflowTests.test_failure_is_recorded_and_propagated) ... ok\ntest_invalid_payload_rejected_before_delivery (test_dispatch.WorkflowTests.test_invalid_payload_rejected_before_delivery) ... ok\ntest_mismatched_payload_on_failed_retry_rejected (test_dispatch.WorkflowTests.test_mismatched_payload_on_failed_retry_rejected) ... ok\ntest_retry_after_failure_increments_attempts (test_dispatch.WorkflowTests.test_retry_after_failure_increments_attempts) ... FAIL\ntest_retry_does_not_erase_original_payload (test_dispatch.WorkflowTests.test_retry_does_not_erase_original_payload) ... ok\n\n======================================================================\nFAIL: test_retry_after_failure_increments_attempts (test_dispatch.WorkflowTests.test_retry_after_failure_increments_attempts)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<LOCAL_LAB_ROOT>\\bench\\gptoss-g2\\verified_runs\\mx-workflow_retry-6b4eabda-fd1-review2\\tests\\test_dispatch.py\", line 62, in test_retry_after_failure_increments_attempts\n    self.assertIsNone(ledger.get(\"y\")[\"last_error\"])\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'network' is not None\n\n----------------------------------------------------------------------\nRan 10 tests in 0.002s\n\nFAILED (failures=1)\n",
+    "log": "<LOCAL_LAB_ROOT>\\bench\\gptoss-g2\\verified_runs\\mx-workflow_retry-6b4eabda-fd1-review2.tests.log"
+  },
+  "all_fixture_sources_untouched": true
+}

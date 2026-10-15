@@ -1,0 +1,18 @@
+import {strict as assert} from 'node:assert';
+import {projectInstructions,skills,loadSkill,kbIndex,searchKb,readKb,readSource} from './src/framework.ts';
+const policy=projectInstructions();
+assert.ok(policy.includes('NCMA Local Agent Lab'));
+const list=skills();
+assert.equal(list.length,4);
+assert.match(loadSkill('idempotency-retry-analysis'),/retry/i);
+assert.throws(()=>loadSkill('../bad'));
+const docs=kbIndex();
+assert.equal(docs.length,4);
+assert.equal(searchKb('idempotency retry delivery')[0]?.id,'reliability-idempotency');
+assert.match(readKb('reliability-idempotency').text,/event delivery/i);
+assert.throws(()=>readKb('../bad'));
+const allowed=['qwen-eval/workflow_retry/src/dispatch.py'];
+assert.match(readSource(allowed[0],allowed),/class Dispatcher/);
+assert.throws(()=>readSource('../unauthorized.txt',allowed));
+assert.throws(()=>readSource('qwen-eval/workflow_retry/src/ledger.py',allowed));
+console.log(JSON.stringify({pass:true,policy:true,skillCount:list.length,kbModules:docs.length,knowledgeTop:searchKb('idempotency retry delivery')[0].id,sourceGuard:true}));

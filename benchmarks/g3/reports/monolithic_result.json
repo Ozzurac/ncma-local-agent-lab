@@ -1,0 +1,46 @@
+{
+  "model": "GPT-OSS 20B MXFP4",
+  "reasoningEffortRequested": "high",
+  "contextConfigured": 98304,
+  "promptTokensMeasured": 76974,
+  "maxCompletionTokens": 16384,
+  "promptSha256": "73452ee5a3272667625c20234e382f9cfaff4be35e7113e8702bc9caf1cff7ed",
+  "fixtureRecords": 1745,
+  "fixtureCases": 12,
+  "tokenizeAttempts": [
+    {
+      "events": 250,
+      "tokens": 81791,
+      "bytes": 204952
+    },
+    {
+      "events": 176,
+      "tokens": 76974,
+      "bytes": 192935
+    }
+  ],
+  "finishReason": "length",
+  "apiError": null,
+  "usage": {
+    "completion_tokens": 16384,
+    "prompt_tokens": 77103,
+    "total_tokens": 93487,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "reasoningContentBytesNotExposed": 71390,
+  "finalTextBytes": 0,
+  "inferenceElapsedSeconds": 637.18,
+  "totalElapsedSeconds": 637.46,
+  "grade": {
+    "parseOk": false,
+    "exactCases": 0,
+    "exactFields": 0,
+    "fieldTotal": 60,
+    "cases": [],
+    "error": "JSON_INVALID: Expecting value: line 1 column 1 (char 0)",
+    "answer_excerpt": ""
+  },
+  "qualification": "Exact offline deterministic graph audit; no model-produced code executed; 96K high mode. This measures long-context retrieval plus join logic."
+}

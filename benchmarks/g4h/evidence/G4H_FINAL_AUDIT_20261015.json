@@ -1,0 +1,41 @@
+{
+  "schema": "ncma-gptoss-g4h-continuation-audit-v1",
+  "date": "2026-10-15",
+  "model": "GPT-OSS 20B MXFP4",
+  "mode": "HYBRID: high draft (850 tokens output cap) plus medium finalizer (3100 output cap)",
+  "contextConfigured": 98304,
+  "contextActuallyFilledInG4": "Not measured at 96K scale. G4 selectively retrieves local evidence into much smaller per-step prompts.",
+  "rounds": 22,
+  "calls": 44,
+  "casesCompleted": 12,
+  "casesTotal": 12,
+  "fieldsCorrect": 60,
+  "fieldsTotal": 60,
+  "sourceVerifiedHops": 78,
+  "rejectedCandidateHops": 28,
+  "modelGeneratedTokens": {
+    "high": 18700,
+    "medium": 32529,
+    "total": 51229
+  },
+  "modelTimeSeconds": {
+    "high": 571.45,
+    "medium": 960.15,
+    "total": 1531.6
+  },
+  "ramMinFreeGiB": 39.049,
+  "resultSha256": "9B62CD5D77EEA91B1423FF3D8FFAD5336808EB4E43D78FE53702B8D22AD78148",
+  "checkpointSha256": "D3FD2717B32DA69327D641AB0892B2BA32C7F0A8C3332010A4D87D93505CEC2E",
+  "independentOracleSha256": "6A5D386012DE368777523CE426ACDF635E0DDDC5EE7C63AC59639D1350795D69",
+  "frozenV1": "PASS",
+  "fixtureIntegrity": "CASE=workflow_retry EXPECTED=5 UNCHANGED=5 MISSING=0 CHANGED=0\r\nCASE=nested_config EXPECTED=5 UNCHANGED=5 MISSING=0 CHANGED=0\r\nUNCHANGED_TOTAL=10 RESULT=PASS",
+  "llamaRemaining": 0,
+  "outcome": "ALL_12_CASES_AND_60_FIELDS_EXACT_MATCH",
+  "caveats": [
+    "Success belongs to the high+medium runtime, not unaided high-only inference.",
+    "High draft can be non-final reasoning; medium finalizer produced validated JSON.",
+    "96K context was configured and confirmed by the server; G4 did not send the full 77K-token corpus in one call.",
+    "Synthetically generated benchmark; results do not establish real-world performance across tasks.",
+    "The independent verifier used the private oracle after final artifact generation."
+  ]
+}

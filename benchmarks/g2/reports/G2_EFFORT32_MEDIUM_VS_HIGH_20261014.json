@@ -1,0 +1,70 @@
+{
+  "schema": "ncma-effort32-v1",
+  "dateUTC": "2026-10-14T21:26:27.0440439Z",
+  "hardware": "RTX 5070 12GB / 32GB RAM",
+  "model": "GPT-OSS 20B MXFP4",
+  "contextTokens": 32768,
+  "runtime": "llama.cpp b11588 / Agents SDK 0.20.0",
+  "case": "nested_config",
+  "frameworkV1Frozen": true,
+  "medium": {
+    "effort": "medium",
+    "outputCap": 8192,
+    "stagePass": true,
+    "reads": 3,
+    "kb": [
+      "software-configuration"
+    ],
+    "generatedFiles": [
+      "src/merge.py",
+      "src/settings.py"
+    ],
+    "tests": 11,
+    "testExit": 0,
+    "minFreeRamGiB": 8.379,
+    "maxReportedOutputTokens": 5235.0
+  },
+  "high8": {
+    "effort": "high",
+    "outputCap": 8192,
+    "promptTemplateVerified": true,
+    "stagePass": false,
+    "reads": 3,
+    "kb": [
+      "software-configuration",
+      "reliability-idempotency"
+    ],
+    "generatedFiles": [],
+    "failure": "ModelBehaviorError: Chat Completions response terminated with finish_reason='length' but produced no assistant text, tool call, or refusal.",
+    "generatedTokensPerServer": 8192,
+    "generationMillisPerServer": 126352.38,
+    "minFreeRamGiB": 8.033
+  },
+  "high12": {
+    "effort": "high",
+    "outputCap": 12288,
+    "promptTemplateVerified": true,
+    "stagePass": false,
+    "reads": 3,
+    "kb": [
+      "software-configuration"
+    ],
+    "generatedFiles": [],
+    "failure": "ModelBehaviorError: Chat Completions response terminated with finish_reason='length' but produced no assistant text, tool call, or refusal.",
+    "generatedTokensPerServer": 12288,
+    "generationMillisPerServer": 187023.89,
+    "minFreeRamGiB": 8.505
+  },
+  "originals": "CASE=workflow_retry EXPECTED=5 UNCHANGED=5 MISSING=0 CHANGED=0\r\nCASE=nested_config EXPECTED=5 UNCHANGED=5 MISSING=0 CHANGED=0\r\nUNCHANGED_TOTAL=10 RESULT=PASS",
+  "llamaProcessesRemaining": 0,
+  "decision": "Keep medium at 32K as candidate default. Do not promote high under current tooling/output budget.",
+  "limitations": [
+    "One medium and two high runs only; not a population model ranking",
+    "High 12K changes output budget; matched comparison is high8 versus medium8",
+    "Prompt template high verified through /apply-template; SDK request-specific rendered prompt not separately captured",
+    "Context 32K provisioned but actual source/test prompt inputs did not require near 32K",
+    "SDK does not expose separate high reasoning tokens; emitted output tokens may reflect thinking",
+    "No high candidate file was produced; therefore no high unit tests were run",
+    "Not an OS-secure sandbox; only trusted fixed test code was executed independently in previous medium gate"
+  ]
+}

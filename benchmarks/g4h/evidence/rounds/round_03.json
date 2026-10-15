@@ -1,0 +1,35 @@
+{
+  "accepted": [],
+  "active": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "completed": 0,
+  "high": {
+    "draft_bytes": 3793,
+    "finish": "length",
+    "in": 1967,
+    "out": 850,
+    "seconds": 26.98
+  },
+  "medium": {
+    "content_bytes": 1835,
+    "finish": "stop",
+    "in": 2339,
+    "out": 1679,
+    "seconds": 47.93
+  },
+  "rejected": {
+    "INC-01": "REV_NOT_INTEGER",
+    "INC-02": "REV_NOT_INTEGER",
+    "INC-03": "REV_NOT_INTEGER",
+    "INC-04": "REV_NOT_INTEGER",
+    "INC-05": "REV_NOT_INTEGER",
+    "INC-06": "REV_NOT_INTEGER"
+  },
+  "round": 3
+}

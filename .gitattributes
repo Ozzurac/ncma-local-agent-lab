@@ -1,0 +1,14 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.ts text eol=lf
+*.mjs text eol=lf
+*.ps1 text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+benchmarks/g3/task_corpus.txt -text
+benchmarks/g3/oracle_reference.json -text
+benchmarks/g4h/evidence/checkpoint.json -text
+benchmarks/g4h/evidence/final_results.json -text
+benchmarks/g4h/evidence/rounds/*.json -text

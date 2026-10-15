@@ -1,0 +1,28 @@
+{
+  "accepted": [
+    "INC-11",
+    "INC-12"
+  ],
+  "active": [
+    "INC-11",
+    "INC-12"
+  ],
+  "completed": 11,
+  "high": {
+    "draft_bytes": 3203,
+    "finish": "length",
+    "in": 1127,
+    "out": 850,
+    "seconds": 24.35
+  },
+  "medium": {
+    "content_bytes": 931,
+    "final_excerpt": "{\"decisions\":[{\"case\":\"INC-01\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-02\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-03\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-04\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-05\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-06\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-07\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-08\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-09\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-10\",\"node\":\"\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-11\",\"node\":\"SV-0247\",\"revision\":0,\"next\":\"STOP\",\"team\":\"TM-0222\",\"seal\":\"D66212B3A719\"},{\"case\":\"INC-12\",\"node\":\"SV-0129\",\"revision\":97,\"next\":\"SV-0385\",\"team\":\"TM-0075\",\"seal\":\"F58377BC42C3\"}]}",
+    "finish": "stop",
+    "in": 1597,
+    "out": 1071,
+    "seconds": 31.39
+  },
+  "rejected": {},
+  "round": 19
+}

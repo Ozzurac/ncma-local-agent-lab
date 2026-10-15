@@ -1,0 +1,16 @@
+test_cli_override_has_priority (test_config.ConfigTests.test_cli_override_has_priority) ... ok
+test_deep_merge_does_not_mutate_inputs (test_config.ConfigTests.test_deep_merge_does_not_mutate_inputs) ... ok
+test_env_nested_merge_preserves_other_keys (test_config.ConfigTests.test_env_nested_merge_preserves_other_keys) ... ok
+test_explicit_false_is_preserved (test_config.ConfigTests.test_explicit_false_is_preserved) ... ok
+test_lists_replace_not_concatenate (test_config.ConfigTests.test_lists_replace_not_concatenate) ... ok
+test_no_overrides (test_config.ConfigTests.test_no_overrides) ... ok
+test_preserve_original_base_data (test_config.ConfigTests.test_preserve_original_base_data) ... ok
+test_reject_unknown_nested_option (test_config.ConfigTests.test_reject_unknown_nested_option) ... ok
+test_reject_unknown_top_level (test_config.ConfigTests.test_reject_unknown_top_level) ... ok
+test_top_level_log_override (test_config.ConfigTests.test_top_level_log_override) ... ok
+test_zero_is_preserved (test_config.ConfigTests.test_zero_is_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK

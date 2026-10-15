@@ -1,0 +1,65 @@
+test_cli_override_has_priority (test_config.ConfigTests.test_cli_override_has_priority) ... FAIL
+test_deep_merge_does_not_mutate_inputs (test_config.ConfigTests.test_deep_merge_does_not_mutate_inputs) ... ok
+test_env_nested_merge_preserves_other_keys (test_config.ConfigTests.test_env_nested_merge_preserves_other_keys) ... FAIL
+test_explicit_false_is_preserved (test_config.ConfigTests.test_explicit_false_is_preserved) ... ERROR
+test_lists_replace_not_concatenate (test_config.ConfigTests.test_lists_replace_not_concatenate) ... ok
+test_no_overrides (test_config.ConfigTests.test_no_overrides) ... ok
+test_preserve_original_base_data (test_config.ConfigTests.test_preserve_original_base_data) ... ok
+test_reject_unknown_nested_option (test_config.ConfigTests.test_reject_unknown_nested_option) ... FAIL
+test_reject_unknown_top_level (test_config.ConfigTests.test_reject_unknown_top_level) ... FAIL
+test_top_level_log_override (test_config.ConfigTests.test_top_level_log_override) ... ok
+test_zero_is_preserved (test_config.ConfigTests.test_zero_is_preserved) ... ok
+
+======================================================================
+ERROR: test_explicit_false_is_preserved (test_config.ConfigTests.test_explicit_false_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\nested_config\tests\test_config.py", line 30, in test_explicit_false_is_preserved
+    self.assertEqual(result["features"]["plugins"],["alpha","beta"])
+                     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'plugins'
+
+======================================================================
+FAIL: test_cli_override_has_priority (test_config.ConfigTests.test_cli_override_has_priority)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\nested_config\tests\test_config.py", line 25, in test_cli_override_has_priority
+    self.assertEqual(result["network"],{"timeout":5,"retries":3})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'timeout': 5} != {'timeout': 5, 'retries': 3}
+- {'timeout': 5}
++ {'retries': 3, 'timeout': 5}
+
+======================================================================
+FAIL: test_env_nested_merge_preserves_other_keys (test_config.ConfigTests.test_env_nested_merge_preserves_other_keys)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\nested_config\tests\test_config.py", line 21, in test_env_nested_merge_preserves_other_keys
+    self.assertEqual(result["network"],{"timeout":10,"retries":3})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'timeout': 10} != {'timeout': 10, 'retries': 3}
+- {'timeout': 10}
++ {'retries': 3, 'timeout': 10}
+
+======================================================================
+FAIL: test_reject_unknown_nested_option (test_config.ConfigTests.test_reject_unknown_nested_option)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\nested_config\tests\test_config.py", line 53, in test_reject_unknown_nested_option
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reject_unknown_top_level (test_config.ConfigTests.test_reject_unknown_top_level)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\nested_config\tests\test_config.py", line 49, in test_reject_unknown_top_level
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+FAILED (failures=4, errors=1)

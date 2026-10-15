@@ -1,0 +1,14 @@
+{
+  "case": "INC-01",
+  "cursor": "SV-0177",
+  "high": true,
+  "reasoning_events": 1785,
+  "control": {
+    "success": true
+  },
+  "finish_reason": "length",
+  "final_bytes": 0,
+  "elapsed": 48.73,
+  "decision_error": "JSONDecodeError:Expecting value: line 1 column 1 (char 0)",
+  "final_excerpt": ""
+}

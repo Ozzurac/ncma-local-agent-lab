@@ -1,0 +1,95 @@
+test_attempt_count_on_success (test_dispatch.WorkflowTests.test_attempt_count_on_success) ... FAIL
+test_basic_delivery (test_dispatch.WorkflowTests.test_basic_delivery) ... ok
+test_completed_duplicate_no_second_send (test_dispatch.WorkflowTests.test_completed_duplicate_no_second_send) ... ok
+test_completed_mismatched_payload_rejected (test_dispatch.WorkflowTests.test_completed_mismatched_payload_rejected) ... FAIL
+test_empty_event_id_rejected_before_delivery (test_dispatch.WorkflowTests.test_empty_event_id_rejected_before_delivery) ... FAIL
+test_failure_is_recorded_and_propagated (test_dispatch.WorkflowTests.test_failure_is_recorded_and_propagated) ... FAIL
+test_invalid_payload_rejected_before_delivery (test_dispatch.WorkflowTests.test_invalid_payload_rejected_before_delivery) ... FAIL
+test_mismatched_payload_on_failed_retry_rejected (test_dispatch.WorkflowTests.test_mismatched_payload_on_failed_retry_rejected) ... ERROR
+test_retry_after_failure_increments_attempts (test_dispatch.WorkflowTests.test_retry_after_failure_increments_attempts) ... FAIL
+test_retry_does_not_erase_original_payload (test_dispatch.WorkflowTests.test_retry_does_not_erase_original_payload) ... FAIL
+
+======================================================================
+ERROR: test_mismatched_payload_on_failed_retry_rejected (test_dispatch.WorkflowTests.test_mismatched_payload_on_failed_retry_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 71, in test_mismatched_payload_on_failed_retry_rejected
+    d.handle({"id":"z","payload":{"v":2}})
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\src\dispatch.py", line 16, in handle
+    self.deliver(event_id, payload)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 66, in broken
+    raise OSError("down")
+OSError: down
+
+======================================================================
+FAIL: test_attempt_count_on_success (test_dispatch.WorkflowTests.test_attempt_count_on_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 36, in test_attempt_count_on_success
+    self.assertEqual(ledger.get("x")["attempts"],1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_completed_mismatched_payload_rejected (test_dispatch.WorkflowTests.test_completed_mismatched_payload_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 29, in test_completed_mismatched_payload_rejected
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_event_id_rejected_before_delivery (test_dispatch.WorkflowTests.test_empty_event_id_rejected_before_delivery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 77, in test_empty_event_id_rejected_before_delivery
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_failure_is_recorded_and_propagated (test_dispatch.WorkflowTests.test_failure_is_recorded_and_propagated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 44, in test_failure_is_recorded_and_propagated
+    self.assertEqual(ledger.get("x")["status"],"failed")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pending' != 'failed'
+- pending
++ failed
+
+
+======================================================================
+FAIL: test_invalid_payload_rejected_before_delivery (test_dispatch.WorkflowTests.test_invalid_payload_rejected_before_delivery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 83, in test_invalid_payload_rejected_before_delivery
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_retry_after_failure_increments_attempts (test_dispatch.WorkflowTests.test_retry_after_failure_increments_attempts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 60, in test_retry_after_failure_increments_attempts
+    self.assertEqual(ledger.get("y")["attempts"],2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_retry_does_not_erase_original_payload (test_dispatch.WorkflowTests.test_retry_does_not_erase_original_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\baseline\workflow_retry\tests\test_dispatch.py", line 99, in test_retry_does_not_erase_original_payload
+    self.assertEqual(ledger.get("k")["attempts"],2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+FAILED (failures=7, errors=1)

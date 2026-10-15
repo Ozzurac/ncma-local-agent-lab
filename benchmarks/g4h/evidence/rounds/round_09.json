@@ -1,0 +1,36 @@
+{
+  "accepted": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "active": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "completed": 2,
+  "high": {
+    "draft_bytes": 3564,
+    "finish": "length",
+    "in": 1827,
+    "out": 850,
+    "seconds": 26.71
+  },
+  "medium": {
+    "content_bytes": 1029,
+    "final_excerpt": "{\"decisions\":[{\"case\":\"INC-01\",\"node\":\"SV-0562\",\"revision\":97,\"next\":\"SV-0546\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-02\",\"node\":\"SV-0275\",\"revision\":0,\"next\":\"STOP\",\"team\":\"TM-0051\",\"seal\":\"331CB0DE49B0\"},{\"case\":\"INC-03\",\"node\":\"SV-0672\",\"revision\":97,\"next\":\"SV-0362\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-04\",\"node\":\"SV-0235\",\"revision\":97,\"next\":\"SV-0259\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-05\",\"node\":\"SV-0069\",\"revision\":97,\"next\":\"SV-0098\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-06\",\"node\":\"SV-0629\",\"revision\":0,\"next\":\"STOP\",\"team\":\"TM-0127\",\"seal\":\"2A3D7DE300E5\"},{\"case\":\"INC-07\",\"node\":\"SV-0451\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-08\",\"node\":\"SV-0428\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-09\",\"node\":\"SV-0010\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-10\",\"node\":\"SV-0097\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-11\",\"node\":\"SV-0695\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"},{\"case\":\"INC-12\",\"node\":\"SV-0272\",\"revision\":0,\"next\":\"\",\"team\":\"\",\"seal\":\"\"}]}",
+    "finish": "stop",
+    "in": 2237,
+    "out": 2473,
+    "seconds": 69.57
+  },
+  "rejected": {},
+  "round": 9
+}

@@ -1,0 +1,30 @@
+{
+  "accepted": [
+    "INC-08",
+    "INC-11",
+    "INC-12"
+  ],
+  "active": [
+    "INC-08",
+    "INC-11",
+    "INC-12"
+  ],
+  "completed": 10,
+  "high": {
+    "draft_bytes": 3353,
+    "finish": "length",
+    "in": 1510,
+    "out": 850,
+    "seconds": 25.84
+  },
+  "medium": {
+    "content_bytes": 326,
+    "final_excerpt": "{\"decisions\":[{\"case\":\"INC-08\",\"node\":\"SV-0486\",\"revision\":0,\"next\":\"STOP\",\"team\":\"TM-0165\",\"seal\":\"4507704509D2\"},{\"case\":\"INC-11\",\"node\":\"SV-0422\",\"revision\":97,\"next\":\"SV-0247\",\"team\":\"TM-0186\",\"seal\":\"992715D2BC10\"},{\"case\":\"INC-12\",\"node\":\"SV-0670\",\"revision\":97,\"next\":\"SV-0129\",\"team\":\"TM-0156\",\"seal\":\"6D8424FB21E1\"}]}",
+    "finish": "stop",
+    "in": 1941,
+    "out": 694,
+    "seconds": 23.46
+  },
+  "rejected": {},
+  "round": 18
+}

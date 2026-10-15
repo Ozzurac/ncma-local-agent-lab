@@ -1,0 +1,188 @@
+{
+  "generator": "gptoss-g3-96k-case-generator",
+  "seed": 96032715,
+  "events": 176,
+  "nodes": 760,
+  "patches": 563,
+  "teams": 240,
+  "cases": 12,
+  "records": 1745,
+  "bytes_utf8": 192935,
+  "sha256": "73452ee5a3272667625c20234e382f9cfaff4be35e7113e8702bc9caf1cff7ed",
+  "oracle": [
+    {
+      "case": "INC-01",
+      "terminal": "SV-0546",
+      "team": "TM-0032",
+      "seal": "5E9DE462DE68",
+      "path": [
+        "SV-0177",
+        "SV-0187",
+        "SV-0646",
+        "SV-0127",
+        "SV-0562",
+        "SV-0546"
+      ]
+    },
+    {
+      "case": "INC-02",
+      "terminal": "SV-0275",
+      "team": "TM-0051",
+      "seal": "331CB0DE49B0",
+      "path": [
+        "SV-0352",
+        "SV-0628",
+        "SV-0593",
+        "SV-0448",
+        "SV-0275"
+      ]
+    },
+    {
+      "case": "INC-03",
+      "terminal": "SV-0608",
+      "team": "TM-0070",
+      "seal": "AE6349F46EE6",
+      "path": [
+        "SV-0103",
+        "SV-0350",
+        "SV-0051",
+        "SV-0092",
+        "SV-0672",
+        "SV-0362",
+        "SV-0608"
+      ]
+    },
+    {
+      "case": "INC-04",
+      "terminal": "SV-0259",
+      "team": "TM-0089",
+      "seal": "9AFDF3D6A017",
+      "path": [
+        "SV-0244",
+        "SV-0674",
+        "SV-0178",
+        "SV-0030",
+        "SV-0235",
+        "SV-0259"
+      ]
+    },
+    {
+      "case": "INC-05",
+      "terminal": "SV-0396",
+      "team": "TM-0108",
+      "seal": "54F9612A3593",
+      "path": [
+        "SV-0172",
+        "SV-0510",
+        "SV-0258",
+        "SV-0531",
+        "SV-0069",
+        "SV-0098",
+        "SV-0149",
+        "SV-0396"
+      ]
+    },
+    {
+      "case": "INC-06",
+      "terminal": "SV-0629",
+      "team": "TM-0127",
+      "seal": "2A3D7DE300E5",
+      "path": [
+        "SV-0218",
+        "SV-0673",
+        "SV-0525",
+        "SV-0250",
+        "SV-0629"
+      ]
+    },
+    {
+      "case": "INC-07",
+      "terminal": "SV-0251",
+      "team": "TM-0146",
+      "seal": "2B306916AE07",
+      "path": [
+        "SV-0451",
+        "SV-0487",
+        "SV-0158",
+        "SV-0322",
+        "SV-0066",
+        "SV-0540",
+        "SV-0251"
+      ]
+    },
+    {
+      "case": "INC-08",
+      "terminal": "SV-0486",
+      "team": "TM-0165",
+      "seal": "4507704509D2",
+      "path": [
+        "SV-0428",
+        "SV-0153",
+        "SV-0380",
+        "SV-0535",
+        "SV-0527",
+        "SV-0548",
+        "SV-0552",
+        "SV-0486"
+      ]
+    },
+    {
+      "case": "INC-09",
+      "terminal": "SV-0353",
+      "team": "TM-0184",
+      "seal": "E37818AE8ACB",
+      "path": [
+        "SV-0010",
+        "SV-0211",
+        "SV-0080",
+        "SV-0019",
+        "SV-0124",
+        "SV-0353"
+      ]
+    },
+    {
+      "case": "INC-10",
+      "terminal": "SV-0686",
+      "team": "TM-0203",
+      "seal": "C782871E65CE",
+      "path": [
+        "SV-0097",
+        "SV-0338",
+        "SV-0132",
+        "SV-0056",
+        "SV-0686"
+      ]
+    },
+    {
+      "case": "INC-11",
+      "terminal": "SV-0247",
+      "team": "TM-0222",
+      "seal": "D66212B3A719",
+      "path": [
+        "SV-0695",
+        "SV-0484",
+        "SV-0652",
+        "SV-0391",
+        "SV-0046",
+        "SV-0422",
+        "SV-0247"
+      ]
+    },
+    {
+      "case": "INC-12",
+      "terminal": "SV-0321",
+      "team": "TM-0001",
+      "seal": "8149F2B668E6",
+      "path": [
+        "SV-0272",
+        "SV-0599",
+        "SV-0337",
+        "SV-0326",
+        "SV-0670",
+        "SV-0129",
+        "SV-0385",
+        "SV-0321"
+      ]
+    }
+  ]
+}

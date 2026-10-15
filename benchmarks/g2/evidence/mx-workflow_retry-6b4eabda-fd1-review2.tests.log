@@ -1,0 +1,24 @@
+test_attempt_count_on_success (test_dispatch.WorkflowTests.test_attempt_count_on_success) ... ok
+test_basic_delivery (test_dispatch.WorkflowTests.test_basic_delivery) ... ok
+test_completed_duplicate_no_second_send (test_dispatch.WorkflowTests.test_completed_duplicate_no_second_send) ... ok
+test_completed_mismatched_payload_rejected (test_dispatch.WorkflowTests.test_completed_mismatched_payload_rejected) ... ok
+test_empty_event_id_rejected_before_delivery (test_dispatch.WorkflowTests.test_empty_event_id_rejected_before_delivery) ... ok
+test_failure_is_recorded_and_propagated (test_dispatch.WorkflowTests.test_failure_is_recorded_and_propagated) ... ok
+test_invalid_payload_rejected_before_delivery (test_dispatch.WorkflowTests.test_invalid_payload_rejected_before_delivery) ... ok
+test_mismatched_payload_on_failed_retry_rejected (test_dispatch.WorkflowTests.test_mismatched_payload_on_failed_retry_rejected) ... ok
+test_retry_after_failure_increments_attempts (test_dispatch.WorkflowTests.test_retry_after_failure_increments_attempts) ... FAIL
+test_retry_does_not_erase_original_payload (test_dispatch.WorkflowTests.test_retry_does_not_erase_original_payload) ... ok
+
+======================================================================
+FAIL: test_retry_after_failure_increments_attempts (test_dispatch.WorkflowTests.test_retry_after_failure_increments_attempts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_LAB_ROOT>\bench\gptoss-g2\verified_runs\mx-workflow_retry-6b4eabda-fd1-review2\tests\test_dispatch.py", line 62, in test_retry_after_failure_increments_attempts
+    self.assertIsNone(ledger.get("y")["last_error"])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'network' is not None
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=1)

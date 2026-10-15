@@ -1,0 +1,17 @@
+{
+ "name": "ncma-gptoss-official-agents-ab",
+ "private": true,
+ "version": "0.1.0",
+ "type": "module",
+ "scripts": {
+  "typecheck": "tsc --noEmit",
+  "test": "node --test tests/*.test.mjs"
+ },
+ "dependencies": {
+  "@openai/agents": "0.20.0",
+  "@types/node": "24.19.2",
+  "openai": "7.33.0",
+  "typescript": "5.9.3",
+  "zod": "4.6.7"
+ }
+}

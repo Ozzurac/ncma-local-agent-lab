@@ -1,0 +1,29 @@
+{
+  "mode": "medium-override",
+  "case": "INC-01",
+  "correct": true,
+  "error": null,
+  "finish": "stop",
+  "usage": {
+    "completion_tokens": 379,
+    "prompt_tokens": 472,
+    "total_tokens": 851,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "final": "{\"decisions\":[{\"case\":\"INC-01\",\"node\":\"SV-0177\",\"revision\":97,\"next\":\"SV-0187\",\"team\":\"\",\"seal\":\"\"}]}",
+  "elapsed": 11.47,
+  "proof": {
+    "high": {
+      "high": true,
+      "medium": false,
+      "excerpt": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-15\n\nReasoning: high\n\n# Valid channels: analysis, commentary, final. Channel must be included for "
+    },
+    "medium": {
+      "high": false,
+      "medium": true,
+      "excerpt": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-15\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included fo"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "type": "PARSE_ONLY_NO_EXECUTION",
+  "results": [
+    {
+      "run": "mx-nested_config-aacb0a13-a56",
+      "path": "src/merge.py",
+      "bytes": 1561,
+      "plus_prefixed_lines": 32,
+      "end_patch_markers": 1,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid syntax (<unknown>, line 14)",
+      "marker_stripped_syntax_valid": true,
+      "marker_stripped_error": null
+    },
+    {
+      "run": "mx-nested_config-aacb0a13-a56",
+      "path": "src/settings.py",
+      "bytes": 1519,
+      "plus_prefixed_lines": 0,
+      "end_patch_markers": 0,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid non-printable character U+00A0 (<unknown>, line 2)",
+      "marker_stripped_syntax_valid": false,
+      "marker_stripped_error": "invalid non-printable character U+00A0 (<unknown>, line 3)"
+    },
+    {
+      "run": "mx-nested_config-764a6e7e-d7a",
+      "path": "src/merge.py",
+      "bytes": 2672,
+      "plus_prefixed_lines": 49,
+      "end_patch_markers": 1,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid syntax (<unknown>, line 25)",
+      "marker_stripped_syntax_valid": true,
+      "marker_stripped_error": null
+    },
+    {
+      "run": "mx-nested_config-764a6e7e-d7a",
+      "path": "src/settings.py",
+      "bytes": 2290,
+      "plus_prefixed_lines": 37,
+      "end_patch_markers": 1,
+      "replacement_chars": 0,
+      "raw_syntax_valid": false,
+      "raw_error": "invalid syntax (<unknown>, line 32)",
+      "marker_stripped_syntax_valid": true,
+      "marker_stripped_error": null
+    }
+  ]
+}

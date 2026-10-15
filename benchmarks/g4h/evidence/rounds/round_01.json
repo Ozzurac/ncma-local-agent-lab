@@ -1,0 +1,35 @@
+{
+  "accepted": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "active": [
+    "INC-01",
+    "INC-02",
+    "INC-03",
+    "INC-04",
+    "INC-05",
+    "INC-06"
+  ],
+  "completed": 0,
+  "high": {
+    "draft_bytes": 3861,
+    "finish": "length",
+    "in": 1947,
+    "out": 850,
+    "seconds": 26.31
+  },
+  "medium": {
+    "content_bytes": 645,
+    "finish": "stop",
+    "in": 2278,
+    "out": 1028,
+    "seconds": 31.79
+  },
+  "rejected": {},
+  "round": 1
+}

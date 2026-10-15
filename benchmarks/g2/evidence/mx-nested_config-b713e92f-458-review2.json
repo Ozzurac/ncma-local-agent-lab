@@ -1,0 +1,29 @@
+{
+  "run_id": "mx-nested_config-b713e92f-458-review2",
+  "status": "PASS_TESTED",
+  "checks": [
+    {
+      "file": "src/merge.py",
+      "sha256": "546023ca17aee16d3a1cb2196bea2361dbc130d780f26c1de24760cd5a7dcbdb",
+      "functions": [
+        "deep_copy_dict",
+        "deep_merge"
+      ]
+    },
+    {
+      "file": "src/settings.py",
+      "sha256": "02df22a12d9df04d49c4d7c71f28e1eb917127fe80ba5531c1981221568fcf58",
+      "functions": [
+        "_validate_overrides",
+        "configure"
+      ]
+    }
+  ],
+  "test": {
+    "exit": 0,
+    "total": 11,
+    "tail": "test_cli_override_has_priority (test_config.ConfigTests.test_cli_override_has_priority) ... ok\ntest_deep_merge_does_not_mutate_inputs (test_config.ConfigTests.test_deep_merge_does_not_mutate_inputs) ... ok\ntest_env_nested_merge_preserves_other_keys (test_config.ConfigTests.test_env_nested_merge_preserves_other_keys) ... ok\ntest_explicit_false_is_preserved (test_config.ConfigTests.test_explicit_false_is_preserved) ... ok\ntest_lists_replace_not_concatenate (test_config.ConfigTests.test_lists_replace_not_concatenate) ... ok\ntest_no_overrides (test_config.ConfigTests.test_no_overrides) ... ok\ntest_preserve_original_base_data (test_config.ConfigTests.test_preserve_original_base_data) ... ok\ntest_reject_unknown_nested_option (test_config.ConfigTests.test_reject_unknown_nested_option) ... ok\ntest_reject_unknown_top_level (test_config.ConfigTests.test_reject_unknown_top_level) ... ok\ntest_top_level_log_override (test_config.ConfigTests.test_top_level_log_override) ... ok\ntest_zero_is_preserved (test_config.ConfigTests.test_zero_is_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.001s\n\nOK\n",
+    "log": "<LOCAL_LAB_ROOT>\\bench\\gptoss-g2\\verified_runs\\mx-nested_config-b713e92f-458-review2.tests.log"
+  },
+  "original_intact": true
+}

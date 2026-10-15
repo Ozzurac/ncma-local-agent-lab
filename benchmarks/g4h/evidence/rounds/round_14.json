@@ -1,0 +1,36 @@
+{
+  "accepted": [
+    "INC-07",
+    "INC-08",
+    "INC-09",
+    "INC-10",
+    "INC-11",
+    "INC-12"
+  ],
+  "active": [
+    "INC-07",
+    "INC-08",
+    "INC-09",
+    "INC-10",
+    "INC-11",
+    "INC-12"
+  ],
+  "completed": 6,
+  "high": {
+    "draft_bytes": 3788,
+    "finish": "length",
+    "in": 2235,
+    "out": 850,
+    "seconds": 27.66
+  },
+  "medium": {
+    "content_bytes": 1001,
+    "final_excerpt": "{\n  \"decisions\": [\n    {\n      \"case\": \"INC-07\",\n      \"node\": \"SV-0066\",\n      \"revision\": 97,\n      \"next\": \"SV-0540\",\n      \"team\": \"TM-0101\",\n      \"seal\": \"5E4BB6A29E5D\"\n    },\n    {\n      \"case\": \"INC-08\",\n      \"node\": \"SV-0527\",\n      \"revision\": 97,\n      \"next\": \"SV-0548\",\n      \"team\": \"TM-0057\",\n      \"seal\": \"EC45388F36E8\"\n    },\n    {\n      \"case\": \"INC-09\",\n      \"node\": \"SV-0019\",\n      \"revision\": 97,\n      \"next\": \"SV-0124\",\n      \"team\": \"TM-0088\",\n      \"seal\": \"77A887231630\"\n    },\n    {\n      \"case\": \"INC-10\",\n      \"node\": \"SV-0056\",\n      \"revision\": 97,\n      \"next\": \"SV-0686\",\n      \"team\": \"TM-0084\",\n      \"seal\": \"68024FED9F8D\"\n    },\n    {\n      \"case\": \"INC-11\",\n      \"node\": \"SV-0652\",\n      \"revision\": 97,\n      \"next\": \"SV-0391\",\n      \"team\": \"TM-0162\",\n      \"seal\": \"9DD7D3FC5707\"\n    },\n    {\n      \"case\": \"INC-12\",\n      \"node\": \"SV-0599\",\n      \"revision\": 97,\n      \"next\": \"SV-0337\",\n      \"team\": \"TM-0162\",\n      \"seal\": \"9DD7D3FC5707\"\n    }\n  ]\n}",
+    "finish": "stop",
+    "in": 2601,
+    "out": 1012,
+    "seconds": 33.0
+  },
+  "rejected": {},
+  "round": 14
+}
