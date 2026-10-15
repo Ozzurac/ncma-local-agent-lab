@@ -17,3 +17,6 @@ Per-call reasoning levels use `chat_template_kwargs.reasoning_effort` (`high` th
 High draft content is deliberately not trusted. Every medium-finalized decision must be checked against retrieved authoritative NODE/PATCH/TEAM rows. No model-generated code runs in this benchmark.
 
 The 96K context is a server allocation and not the amount of input used by every call.
+
+
+For step-by-step compatibility checks and isolated new-run scoring, see [BACKEND_PORTABILITY.md](BACKEND_PORTABILITY.md).

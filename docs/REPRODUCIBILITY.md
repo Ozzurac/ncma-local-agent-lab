@@ -29,3 +29,5 @@ python experiments/g3/generate_case.py --events 176
 The dataset comprises 760 NODE, 563 PATCH and 240 TEAM records, 12 cases and noisy EVENT/NOTE records. Final correctness was checked independently against the synthetic oracle: 12/12 incident records, including full paths and team seals.
 
 The published G4H has 22 JSON round reports, a compact checkpoint, final results and an independent audit. Raw model reasoning, GPU binary bundles, caches and raw machine logs are excluded.
+
+For a new compatible local inference server, follow [backend portability and a fresh-run oracle check](BACKEND_PORTABILITY.md). This is separate from verifying archived evidence.
