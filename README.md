@@ -68,6 +68,12 @@ Start your own verified-compatible OpenAI Chat Completions server on `127.0.0.1:
 
 The runner never installs models, starts services, or executes model-authored code. Live G4H requires a backend that honors `chat_template_kwargs.reasoning_effort` as high and medium; compatibility should be confirmed, not assumed.
 
+## Engineering deep dives
+
+- [G4H sequence diagram: retrieval, validation, checkpoints and resume](docs/G4H_SEQUENCE.md)
+- [G2 -> G3 -> G4H comparison: pass, fail and trade-offs](docs/G2_G3_G4H_COMPARISON.md)
+- [Reproduce G4H with another compatible inference backend](docs/BACKEND_PORTABILITY.md)
+- [Verify a fresh backend's completed result](scripts/verify_backend_result.py) against the public synthetic oracle.
 ## Project map
 
 - [Portable Python coordinator](src/ncma_lab): Source indexing, strict graph validator, checkpoint persistence, bounded high/medium inference.

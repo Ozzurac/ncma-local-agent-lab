@@ -15,3 +15,7 @@ G4H: 22 rounds, 44 calls, 78 accepted hops, 28 rejected candidates. Generated **
 The result belongs to the *hybrid system* and one synthetic deterministic fixture. It does not demonstrate high-only success, general ranking, or a 96K input per G4H call.
 
 Evidence: [G2](../benchmarks/g2/reports), [G3](../benchmarks/g3/reports), [G4H audit](../benchmarks/g4h/evidence/G4H_FINAL_AUDIT_20261015.md), [individual rounds](../benchmarks/g4h/evidence/rounds).
+
+## G2 -> G3 -> G4H technical review
+
+See [the side-by-side measured comparison](G2_G3_G4H_COMPARISON.md) and [G4H's full sequence / recovery boundary](G4H_SEQUENCE.md). For a new backend use [the portability instructions](BACKEND_PORTABILITY.md); published offline tests do not score a newly generated run.
