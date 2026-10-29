@@ -1,0 +1,20 @@
+# Datadog Software Catalog definition (schema v3). Ownership and links for this repository.
+apiVersion: v3
+kind: service
+metadata:
+  name: ncma-local-agent-lab
+  displayName: NCMA Local Agent Lab
+  description: "Reproducible local LLM agent runtime: checkpointed inference, modular retrieval, independent audit."
+  owner: ncma
+  tags:
+    - repo:ncma-local-agent-lab
+    - language:python
+  links:
+    - name: Source
+      type: repo
+      url: https://github.com/Ozzurac/ncma-local-agent-lab
+      provider: github
+spec:
+  languages: [python]
+  componentOf:
+    - system:ncma-platform
