@@ -142,6 +142,12 @@ def validate_metadata(data):
         raise ValueError("Disable RAM prompt cache, speculation and context shift for this experiment")
     if not isinstance(data["hardware"], dict) or not data["hardware"]:
         raise ValueError("hardware must describe the actual host")
+    for key in ("quantization", "kv_type_k", "kv_type_v", "flash_attention", "backend"):
+        if not isinstance(data[key], str) or not data[key].strip() or any(
+                marker in data[key].upper() for marker in ("REPLACE", "PREENCHER")):
+            raise ValueError("Incomplete metadata: " + key)
+    if type(data["gpu_layers"]) is not int or data["gpu_layers"] < 0:
+        raise ValueError("Invalid GPU layer count")
     # Metadata is an explicit operator declaration, not hardware attestation.
     return data
 
@@ -209,7 +215,10 @@ def run(client, metadata, emit, repetitions=5, warmups=1, lines=512, n_predict=3
         for variant in variants:
             # Force a fresh prefill before EVERY observation. Warmup and order
             # are balanced; priming costs are kept separate, never hidden.
+            identity = {"iteration": iteration, "variant": variant, "warmup": iteration < warmups}
+            emit(dict(identity, kind="trial_start"))
             prime = client.complete(dict(settings, prompt=prefix, n_predict=1, cache_prompt=False))
+            emit(dict(identity, kind="prime", measurement=prime))
             if prime["timings"]["cache_n"] != 0:
                 raise ValueError("Server ignored cache_prompt=False during prime")
             operation = {}
@@ -222,6 +231,7 @@ def run(client, metadata, emit, repetitions=5, warmups=1, lines=512, n_predict=3
                         raise ValueError("Slot action returned no tokens: " + action)
                     operation[action] = {"wall_ms": (time.perf_counter() - start) * 1000,
                                          "tokens": response[count_key]}
+                    emit(dict(identity, kind="slot_action", action=action, measurement=operation[action]))
             measurement = client.complete(dict(settings, prompt=full, cache_prompt=(variant != "baseline")))
             reused = measurement["timings"]["cache_n"]
             valid_cache = reused == 0 if variant == "baseline" else reused > 0
@@ -231,6 +241,10 @@ def run(client, metadata, emit, repetitions=5, warmups=1, lines=512, n_predict=3
                    "prime": prime, "measurement": measurement, "slot_operations": operation,
                    "cache_condition_met": valid_cache, "output_length_condition_met": valid_length,
                    "reused_prefix_fraction": min(1, reused / len(prefix))}
+            if variant == "restored":
+                # Resume latency includes the restore I/O on the critical path;
+                # saving and deliberately erasing are reported separately.
+                row["resume_including_restore_ms"] = operation["restore"]["wall_ms"] + measurement["ttft_ms"]
             emit(row)
             rows.append(row)
             if not valid_cache:
@@ -277,24 +291,28 @@ def main(argv=None):
               "python": platform.python_version(), "platform": platform.system(),
               "experiment_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               "mode": "probe" if args.probe else "inference"}
+    stage = "initialization"
     def emit(row):
         with (args.out / "trials.jsonl").open("a", encoding="utf-8") as stream:
             stream.write(json.dumps(row, sort_keys=True, allow_nan=False) + "\n")
     code = 0
     try:
         if args.probe:
+            stage = "health_probe"
             report["status"] = "AVAILABLE" if client.request("/health").get("status") == "ok" else "UNAVAILABLE"
             code = 0 if report["status"] == "AVAILABLE" else 2
         else:
+            stage = "metadata_validation"
             metadata = validate_metadata(json.loads(args.metadata.read_text(encoding="utf-8")))
             report["metadata"] = metadata
             report["parameters"] = {key: getattr(args, key) for key in
                                     ("repetitions", "warmups", "lines", "n_predict", "snapshot")}
+            stage = "benchmark_protocol"
             report.update(run(client, metadata, emit, args.repetitions, args.warmups,
                               args.lines, args.n_predict, args.snapshot))
     except Exception as exc:
         # Do not export arbitrary server error text, URLs or filesystem paths.
-        report.update(status="BLOCKED_OR_FAILED", error_type=type(exc).__name__)
+        report.update(status="BLOCKED_OR_FAILED", error_type=type(exc).__name__, failure_stage=stage)
         code = 2
     (args.out / "report.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": report["status"], "exit_code": code}))

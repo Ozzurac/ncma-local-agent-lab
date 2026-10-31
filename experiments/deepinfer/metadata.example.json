@@ -1,0 +1,26 @@
+{
+  "runtime_commit": "REPLACE_WITH_40_HEX_COMMIT",
+  "runtime_binary_sha256": "REPLACE_WITH_BINARY_SHA256",
+  "model_sha256": "REPLACE_WITH_GGUF_SHA256",
+  "tokenizer_sha256": "REPLACE_WITH_TOKENIZER_CONTAINER_SHA256",
+  "quantization": "REPLACE_WITH_ACTUAL_QUANTIZATION",
+  "context_size": 16384,
+  "batch_size": 512,
+  "ubatch_size": 128,
+  "parallel": 1,
+  "gpu_layers": 0,
+  "kv_type_k": "f16",
+  "kv_type_v": "f16",
+  "flash_attention": "off",
+  "backend": "llama.cpp-native",
+  "hardware": {
+    "cpu": "REPLACE_WITH_ACTUAL_CPU",
+    "gpu": "none",
+    "ram_gib": "REPLACE_WITH_ACTUAL_RAM"
+  },
+  "threads": 8,
+  "threads_batch": 8,
+  "cache_ram_mib": 0,
+  "speculative": "none",
+  "context_shift": false
+}

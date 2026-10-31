@@ -1,0 +1,11 @@
+{
+  "schema": "ncma-prefix-bench-v1",
+  "created_utc": "2026-10-31T21:23:06.751720+00:00",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "experiment_sha256": "dbaeebd5181be3f27b232002b50a349825bb83e3f009e13eae3fa253ea575e0e",
+  "mode": "probe",
+  "status": "BLOCKED_OR_FAILED",
+  "error_type": "URLError",
+  "failure_stage": "health_probe"
+}

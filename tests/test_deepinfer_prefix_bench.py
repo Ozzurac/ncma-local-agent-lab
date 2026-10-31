@@ -77,7 +77,7 @@ class Handler(BaseHTTPRequestHandler):
             self.server.cache = list(prompt)
             n = data["n_predict"]
             timings = dict(cache_n=common, prompt_n=len(prompt) - common,
-                           predicted_n=n, prompt_ms=1, predicted_ms=1,
+                           predicted_n=n - int(self.server.short_output), prompt_ms=1, predicted_ms=1,
                            prompt_per_second=1, predicted_per_second=1)
             if self.server.bad_timing:
                 timings.pop("cache_n")
@@ -117,6 +117,7 @@ class ContractTests(unittest.TestCase):
         self.server.bad_timing = False
         self.server.missing_final = False
         self.server.truncated = False
+        self.server.short_output = False
 
     def test_ab_uses_same_tokens_balanced_order_and_fresh_priming(self):
         events = []
@@ -159,6 +160,13 @@ class ContractTests(unittest.TestCase):
         self.server.bad_timing = True
         with self.assertRaisesRegex(ValueError, "cache_n"):
             bench.run(self.client, metadata(), lambda row: None, repetitions=2, lines=4)
+
+    def test_different_generation_budget_rejected_and_recorded(self):
+        self.server.short_output = True
+        events = []
+        with self.assertRaisesRegex(ValueError, "Generation length"):
+            bench.run(self.client, metadata(), events.append, repetitions=2, lines=4)
+        self.assertFalse(events[-1]["output_length_condition_met"])
 
     def test_missing_final_rejected(self):
         self.server.missing_final = True

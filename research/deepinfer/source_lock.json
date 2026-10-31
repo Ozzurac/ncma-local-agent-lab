@@ -1,0 +1,500 @@
+{
+  "schema": "ncma-source-lock-v1",
+  "retrieved_date": "2026-10-31",
+  "ncma_base": "8e2306c2edc7d3e1c54fb34fe6874f2d84266806",
+  "sources": {
+    "deepinfer": {
+      "repository": "deepseek-ai/DeepInfer",
+      "commit": "553741557a57df44a46fb3ab72b6aafeaf945337",
+      "license": "Apache-2.0",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "b55624158ada4dc21b882d24ded06bf82f65350b44d170877b68395712cd670d",
+          "bytes": 4660,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/LICENSE"
+        },
+        {
+          "path": ".gitmodules",
+          "sha256": "abaec302b842bd11753e114cc02af43925c7216f9673983090b879e46b9fc157",
+          "bytes": 666,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/.gitmodules"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "30de7579a8df8b3b4c4fe6efa957e5bdf3ac39a0a87ddfff3c76836f95f530d0",
+          "bytes": 2242,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/pyproject.toml"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "6b7eb923377c7fa34ea950d5f8fb8c917a240b325494e13a83b3852d7d479db9",
+          "bytes": 342,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/requirements.txt"
+        },
+        {
+          "path": "requirements-nvidia.txt",
+          "sha256": "f76510c5b75dc9633669596d03534a537b9f14241718b8fc93fdff9e4b795162",
+          "bytes": 127,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/requirements-nvidia.txt"
+        },
+        {
+          "path": "requirements-dev.txt",
+          "sha256": "ff1d8438df5a35604424fc78fa4965fe36c733c47643eaffffb5b15d06e07b51",
+          "bytes": 483,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/requirements-dev.txt"
+        },
+        {
+          "path": "doc/inference_deployment_qa.md",
+          "sha256": "55d428d9958aa35ac863d7f5a2eb21528e683226784b1ac334e8068e21f2326f",
+          "bytes": 28865,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/doc/inference_deployment_qa.md"
+        },
+        {
+          "path": "csrc/engine/mtp_varlen.hpp",
+          "sha256": "164f45db4cccd6d6909dd2846e7dfffb57754b108af679443bf4bd71ec33785a",
+          "bytes": 12151,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/csrc/engine/mtp_varlen.hpp"
+        },
+        {
+          "path": "csrc/engine/scheduler.hpp",
+          "sha256": "c14de4d5341170227b82ddf2d146d9c6a337937885a6886237aab5a7238da5db",
+          "bytes": 66347,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/csrc/engine/scheduler.hpp"
+        },
+        {
+          "path": "csrc/engine/block_manager.hpp",
+          "sha256": "83eabc936b4316b70254f8772041669de3e6a8878b4f12859e3a7ddd17c395d0",
+          "bytes": 7224,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/csrc/engine/block_manager.hpp"
+        },
+        {
+          "path": "csrc/engine/sequence.hpp",
+          "sha256": "67ef6ea70ee31a519fd632ee2d7be4710a6d796f786cf336dd3d3f06f7fbe16b",
+          "bytes": 17396,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/csrc/engine/sequence.hpp"
+        },
+        {
+          "path": "csrc/engine/input_metadata/prepare_tensor_input_v4.cpp",
+          "sha256": "93a6b1dd533db116d2f7540c78d6bb5419bdb8c1d2063b031ab8b1a8cc138fe2",
+          "bytes": 32119,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/csrc/engine/input_metadata/prepare_tensor_input_v4.cpp"
+        },
+        {
+          "path": "csrc/engine/input_metadata/block_load_plan.cpp",
+          "sha256": "3a68483099af69e6a712a54d4f48f2b7b6f785fcacadeb6502074acaa26e6669",
+          "bytes": 2755,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/csrc/engine/input_metadata/block_load_plan.cpp"
+        },
+        {
+          "path": "deepinfer/engine/llm_engine.py",
+          "sha256": "a636d60ca5711f6b7c21e68370c3bd9c2de6fc3f4439a7429ca4f572f0edeebe",
+          "bytes": 45489,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/engine/llm_engine.py"
+        },
+        {
+          "path": "deepinfer/worker/worker.py",
+          "sha256": "ad32e595d9ab289dff1a7709136431ac60dae709e9e5123ae42eb0ebf7c30cbb",
+          "bytes": 11604,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/worker/worker.py"
+        },
+        {
+          "path": "deepinfer/model_executor/models/mtp/dflash.py",
+          "sha256": "12ebfb9c793062844d40e0fab17164d5365d965c318f8b9f0f4adf51b3afb684",
+          "bytes": 17894,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/models/mtp/dflash.py"
+        },
+        {
+          "path": "deepinfer/model_executor/models/v4_modules/heads.py",
+          "sha256": "697439602617d53409fea41c8cc1d95b1002842823d7ccd824fb720b5111ae2e",
+          "bytes": 4365,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/models/v4_modules/heads.py"
+        },
+        {
+          "path": "deepinfer/model_executor/layers/sampler.py",
+          "sha256": "81205a12e860041ffa904321b852db2d048bc038bb07d494dbb78b44b522d9a9",
+          "bytes": 30729,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/layers/sampler.py"
+        },
+        {
+          "path": "deepinfer/model_executor/layers/mtp_info_pool.py",
+          "sha256": "f0ae9ad98d03e2bc6d3f4406cd757e7ce82010ec6fdc0f545d9d86776e31ee72",
+          "bytes": 3288,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/layers/mtp_info_pool.py"
+        },
+        {
+          "path": "deepinfer/model_executor/layers/tilelang_ops/cuda/schedule_mtp_varlen.py",
+          "sha256": "c4814812966ae3bd69ed4b4078f6a9c3a183c0a9625144b72bf092dbc7b357bb",
+          "bytes": 3216,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/layers/tilelang_ops/cuda/schedule_mtp_varlen.py"
+        },
+        {
+          "path": "deepinfer/model_executor/models/v4_modules/yoco.py",
+          "sha256": "7dc8ad7b6ca4902bcef67b1cbc4804592995c5b6af9ebaa00b59cc338c1aa6ec",
+          "bytes": 6540,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/models/v4_modules/yoco.py"
+        },
+        {
+          "path": "deepinfer/model_executor/input_metadata/yoco.py",
+          "sha256": "882a33de3da0fba81644adde9e9e1a90ec3d3ff34a8f3ad4dda18faafebd6460",
+          "bytes": 10478,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/input_metadata/yoco.py"
+        },
+        {
+          "path": "deepinfer/model_executor/layers/attention_backend.py",
+          "sha256": "0ad1c371863524dacf199e2e8be25b02033221c3c85c9922d39d9696c6a247d3",
+          "bytes": 6171,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/layers/attention_backend.py"
+        },
+        {
+          "path": "deepinfer/model_executor/models/v4_modules/mlp.py",
+          "sha256": "2541bcc83b178a9e2f18b387b301d60111d6d603e18e2d31df38196b03d290dd",
+          "bytes": 25524,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/models/v4_modules/mlp.py"
+        },
+        {
+          "path": "deepinfer/model_executor/eplb/policy.py",
+          "sha256": "52241603827a1a1d19a395d48f5d618a7336fd1ceee631127e6782c644f736dc",
+          "bytes": 7862,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/eplb/policy.py"
+        },
+        {
+          "path": "deepinfer/model_executor/eplb/__init__.py",
+          "sha256": "1b30c01b36cfc711281bd729ab5cbf09826b4ba22359573f46d96c10ea6e7260",
+          "bytes": 19270,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/eplb/__init__.py"
+        },
+        {
+          "path": "deepinfer/model_executor/eplb/shuffle.py",
+          "sha256": "e86dcd3a1b54678cb28d7910461c670e42c10c1d8cafe3e766afce0a640ee71f",
+          "bytes": 9718,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/eplb/shuffle.py"
+        },
+        {
+          "path": "deepinfer/structure_output/so_matcher_builder.py",
+          "sha256": "1f26aea5205c2f6953ba7ca21079c84b888115ed44c158a120536a17517f1ee0",
+          "bytes": 5274,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/structure_output/so_matcher_builder.py"
+        },
+        {
+          "path": "deepinfer/structure_output/matcher.py",
+          "sha256": "83b69010567a4306d6d435c88d019a302e7ee2d89af01eb037a59e40c0e67ce1",
+          "bytes": 12520,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/structure_output/matcher.py"
+        },
+        {
+          "path": "deepinfer/hugging_face/tokenizer.py",
+          "sha256": "a2a205fa71bd6e7f1ad7656ab1a7e15817eaef042f91a50218e69fe0f1e5dc23",
+          "bytes": 5958,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/hugging_face/tokenizer.py"
+        },
+        {
+          "path": "examples/yoco/yoco_equiv.py",
+          "sha256": "4abe933e510b7797ada8835d57d7504dcc049834c990429316e34e937f6c0032",
+          "bytes": 51830,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/examples/yoco/yoco_equiv.py"
+        },
+        {
+          "path": "examples/sweep/run_sweep.sh",
+          "sha256": "bc15882ffef797e93b724233d71395f2b49973463572e797a2fff5148d50ca5c",
+          "bytes": 3798,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/examples/sweep/run_sweep.sh"
+        },
+        {
+          "path": "tests/test_cuda_sync_guards.py",
+          "sha256": "d362e11f6a7004b497e2012f2d4e54c54073ec970b78e9ef77a28b5b7a996b18",
+          "bytes": 8246,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/tests/test_cuda_sync_guards.py"
+        },
+        {
+          "path": "tests/models/test_eplb_policy.py",
+          "sha256": "1671e3af1cb5ac293307dc37e288efe61da416450f2d677a94163a3e28426ce5",
+          "bytes": 6015,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/tests/models/test_eplb_policy.py"
+        },
+        {
+          "path": "tests/models/test_batch_invariant.py",
+          "sha256": "10ceb7fec656188623de450fab4dfffed98bc2ffe9510f8f545dff6f0b5dd887",
+          "bytes": 3993,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/tests/models/test_batch_invariant.py"
+        },
+        {
+          "path": "tests/models/test_sampler.py",
+          "sha256": "bed2500391b5849dbabbe97fa10c1a8beba1a3d745dd8e73d00de762ecd57ce8",
+          "bytes": 9256,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/tests/models/test_sampler.py"
+        },
+        {
+          "path": "deepinfer/model_executor/layers/linear.py",
+          "sha256": "a8ca60074a1c868e87662240073c6c3648d66ceae953befa3b08772da2225967",
+          "bytes": 6850,
+          "url": "https://github.com/deepseek-ai/DeepInfer/blob/553741557a57df44a46fb3ab72b6aafeaf945337/deepinfer/model_executor/layers/linear.py"
+        }
+      ]
+    },
+    "llama.cpp": {
+      "repository": "ggml-org/llama.cpp",
+      "commit": "ddf48f85c933c1f438212a02eb21e7b001d2d37d",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+          "bytes": 1078,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/LICENSE"
+        },
+        {
+          "path": "include/llama.h",
+          "sha256": "f07ffbabd3fbe9ef21d97b4d4ce8328d9c2a123ccbf5266f04a3146d70ce4f91",
+          "bytes": 91030,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/include/llama.h"
+        },
+        {
+          "path": "common/arg.cpp",
+          "sha256": "83cd576c95940ac4f84059da3c5b34914c15a94a834a608743389f2d43f25ea2",
+          "bytes": 223926,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/common/arg.cpp"
+        },
+        {
+          "path": "common/speculative.cpp",
+          "sha256": "667f3e71026a4701d4c3e6338ca25ba38b7f83d6a41ae9f9c33763beb12a64ad",
+          "bytes": 126737,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/common/speculative.cpp"
+        },
+        {
+          "path": "common/speculative.h",
+          "sha256": "1e30df3a472901844f000d2c77cb27e450d0eaf2028a8469116d79da23c7271b",
+          "bytes": 5335,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/common/speculative.h"
+        },
+        {
+          "path": "docs/speculative.md",
+          "sha256": "f713d7cf6ff163394035b64fbf1f98f82230f45456e56775b930b188ada5749e",
+          "bytes": 24116,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/docs/speculative.md"
+        },
+        {
+          "path": "tools/server/README.md",
+          "sha256": "05df881b170f3ae15877aefac55190e2b53ad455e147251e252ca3867ed901ce",
+          "bytes": 135916,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/tools/server/README.md"
+        },
+        {
+          "path": "tools/server/server-context.cpp",
+          "sha256": "5fae51fa9164f0e5c3e185a4d8834bc805d58ae6de1a4269929cdcbe840c9551",
+          "bytes": 304310,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/tools/server/server-context.cpp"
+        },
+        {
+          "path": "tools/server/server-task.cpp",
+          "sha256": "9e52cb9eee85c26994695436c3bbc4a6d68afa430f6d38ae8886f4f189720a58",
+          "bytes": 68949,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/tools/server/server-task.cpp"
+        },
+        {
+          "path": "tools/server/server-task.h",
+          "sha256": "fef14ce4d768026376a57e9bc281a21ceeaa5c7c829604a760d7f5154eb617d5",
+          "bytes": 24135,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/tools/server/server-task.h"
+        },
+        {
+          "path": "tools/server/server-common.cpp",
+          "sha256": "b686729ed7d098e2f0c3da1ba28325d0e6d30721dab09f71cb9b53f342710ddb",
+          "bytes": 79532,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/tools/server/server-common.cpp"
+        },
+        {
+          "path": "tools/server/tests/unit/test_slot_save.py",
+          "sha256": "33d9b88abbf6ffe942933d942d7db9f16ab8fa51cae1521f421a07ce062aca4a",
+          "bytes": 32124,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/tools/server/tests/unit/test_slot_save.py"
+        },
+        {
+          "path": "src/llama-context.cpp",
+          "sha256": "63645057d8f017d651544499fc1f3bcff5997cf25270b06479558ebfb5f9f3d2",
+          "bytes": 172132,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/llama-context.cpp"
+        },
+        {
+          "path": "src/llama-kv-cache.cpp",
+          "sha256": "40205d197380761b373658d6206f4ccd91455b4f2f45a3e35c18c3f9ea0ee6f3",
+          "bytes": 98387,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/llama-kv-cache.cpp"
+        },
+        {
+          "path": "src/llama-memory-hybrid.cpp",
+          "sha256": "0c69f0f91072192d71f23ff1d920379aa8b90799db4891c55175db81407d0c37",
+          "bytes": 9586,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/llama-memory-hybrid.cpp"
+        },
+        {
+          "path": "src/models/dflash.cpp",
+          "sha256": "3d7c35d0dd12a9d2c9cbae976f59bedea580635da4d714abc719e893106ae498",
+          "bytes": 95237,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/models/dflash.cpp"
+        },
+        {
+          "path": "src/models/openai-moe.cpp",
+          "sha256": "1e72822e506c534f111762e71ae282dbc20d9d9a26b12bfa6aeae384dbb027c0",
+          "bytes": 6763,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/models/openai-moe.cpp"
+        },
+        {
+          "path": "src/models/qwen35moe.cpp",
+          "sha256": "579426f57c8691279ab9231264b5a0bceb214e57b3876d58020a1f40a98647a4",
+          "bytes": 32406,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/models/qwen35moe.cpp"
+        },
+        {
+          "path": "src/models/nemotron-h-moe.cpp",
+          "sha256": "fcdb970c37f60e40118a851b808bf27ec1c1f82501cb52605f198569aa542b31",
+          "bytes": 5995,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/src/models/nemotron-h-moe.cpp"
+        },
+        {
+          "path": "ggml/src/ggml-cuda/common.cuh",
+          "sha256": "37f3dac063d6319d2ed99aba4ba3b38bc61713544389af53d4fa1b4cd8fbf135",
+          "bytes": 66036,
+          "url": "https://github.com/ggml-org/llama.cpp/blob/ddf48f85c933c1f438212a02eb21e7b001d2d37d/ggml/src/ggml-cuda/common.cuh"
+        }
+      ]
+    },
+    "DeepGEMM": {
+      "repository": "deepseek-ai/DeepGEMM",
+      "commit": "1fc9c66975ee322d628b3288534ca0e9ce12a64d",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "1112521165450d617bf0ff0cc06d8944f7b4548ecf4727e1d16143671014a4d2",
+          "bytes": 13257,
+          "url": "https://github.com/deepseek-ai/DeepGEMM/blob/1fc9c66975ee322d628b3288534ca0e9ce12a64d/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "6c73a30c14a2938abaa6afe98ebb19e6d81dac5bd4ace0cb05c61c20afa37b85",
+          "bytes": 1065,
+          "url": "https://github.com/deepseek-ai/DeepGEMM/blob/1fc9c66975ee322d628b3288534ca0e9ce12a64d/LICENSE"
+        },
+        {
+          "path": "csrc/jit_kernels/impls/sm100_bf16_mega_moe.hpp",
+          "sha256": "cd4d93e6cc9bb0eaa2d4a7721911c9c48b3dc8eb33d72ea38fb43144b71396c1",
+          "bytes": 6948,
+          "url": "https://github.com/deepseek-ai/DeepGEMM/blob/1fc9c66975ee322d628b3288534ca0e9ce12a64d/csrc/jit_kernels/impls/sm100_bf16_mega_moe.hpp"
+        }
+      ]
+    },
+    "FlashMLA": {
+      "repository": "deepseek-ai/FlashMLA",
+      "commit": "2e5429fc5653bab6e081f09477126f731882a6a9",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "9e53e4acce786afdcd275d7c025336656828bd80e8a939f9886dc591ef2ea610",
+          "bytes": 22149,
+          "url": "https://github.com/deepseek-ai/FlashMLA/blob/2e5429fc5653bab6e081f09477126f731882a6a9/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "6c73a30c14a2938abaa6afe98ebb19e6d81dac5bd4ace0cb05c61c20afa37b85",
+          "bytes": 1065,
+          "url": "https://github.com/deepseek-ai/FlashMLA/blob/2e5429fc5653bab6e081f09477126f731882a6a9/LICENSE"
+        },
+        {
+          "path": "csrc/api/sparse_decode.cpp",
+          "sha256": "95e80b055de6da3471f27f49296368c8c17392e90bc745d188c5af31e21a6bb6",
+          "bytes": 18631,
+          "url": "https://github.com/deepseek-ai/FlashMLA/blob/2e5429fc5653bab6e081f09477126f731882a6a9/csrc/api/sparse_decode.cpp"
+        },
+        {
+          "path": "csrc/api/sparse_prefill.cpp",
+          "sha256": "92f6fd4e9dfc04c9e6e00718936ab854b641f1774c2371efff3880305047d933",
+          "bytes": 7446,
+          "url": "https://github.com/deepseek-ai/FlashMLA/blob/2e5429fc5653bab6e081f09477126f731882a6a9/csrc/api/sparse_prefill.cpp"
+        }
+      ]
+    },
+    "DeepEP": {
+      "repository": "deepseek-ai/DeepEP",
+      "commit": "f6aa38fe06cd4a0489e7730365d4e0114970a2f3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "86415f7fc11381dceb14c112b6c602103d975936444601666ab1fcfd65e8fceb",
+          "bytes": 32914,
+          "url": "https://github.com/deepseek-ai/DeepEP/blob/f6aa38fe06cd4a0489e7730365d4e0114970a2f3/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "6c73a30c14a2938abaa6afe98ebb19e6d81dac5bd4ace0cb05c61c20afa37b85",
+          "bytes": 1065,
+          "url": "https://github.com/deepseek-ai/DeepEP/blob/f6aa38fe06cd4a0489e7730365d4e0114970a2f3/LICENSE"
+        }
+      ]
+    },
+    "DeepSelect": {
+      "repository": "deepseek-ai/DeepSelect",
+      "commit": "bfa4507d935f17ebfc3d0f00ff7d3c9a4d0e5c18",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "70489aa4ce1e63709c1fcd9a101c0dc2f5063a4d4a75b5d4f9388928f9d42cf9",
+          "bytes": 5577,
+          "url": "https://github.com/deepseek-ai/DeepSelect/blob/bfa4507d935f17ebfc3d0f00ff7d3c9a4d0e5c18/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "0cea1d13524d5fef8bf4e4ca656b48e5db4276a12b4993f84d24456d70d43ef4",
+          "bytes": 1064,
+          "url": "https://github.com/deepseek-ai/DeepSelect/blob/bfa4507d935f17ebfc3d0f00ff7d3c9a4d0e5c18/LICENSE"
+        }
+      ]
+    },
+    "recipe": {
+      "repository": "deepseek-ai/deepseek-recipe",
+      "commit": "935817c66f5d6e64838f419692545f06787e485f",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "e3ea4bd6b3a3debd8431af23d81935b93858636883dfc651f7ecc3416e099a67",
+          "bytes": 7141,
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/935817c66f5d6e64838f419692545f06787e485f/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+          "bytes": 1065,
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/935817c66f5d6e64838f419692545f06787e485f/LICENSE"
+        },
+        {
+          "path": "deepseek-recipe-encoding/src/tokenizer.rs",
+          "sha256": "21fefc37c6689cac8357d030f1ccb2c84e37d293950797ec4a6a0bfc208b56de",
+          "bytes": 4823,
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/935817c66f5d6e64838f419692545f06787e485f/deepseek-recipe-encoding/src/tokenizer.rs"
+        },
+        {
+          "path": "deepseek-recipe/src/stream/output_parser.rs",
+          "sha256": "38aeb5e0cd475c39b2269e71adc037167e713cf98ba551d7210365ceb6eccbc7",
+          "bytes": 30794,
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/935817c66f5d6e64838f419692545f06787e485f/deepseek-recipe/src/stream/output_parser.rs"
+        },
+        {
+          "path": "docs/tokenizer.md",
+          "sha256": "3ac464425807e1251693a8813c3e586833d8a098732860f893ac4ce07b2454c4",
+          "bytes": 10148,
+          "url": "https://github.com/deepseek-ai/deepseek-recipe/blob/935817c66f5d6e64838f419692545f06787e485f/docs/tokenizer.md"
+        }
+      ]
+    }
+  }
+}

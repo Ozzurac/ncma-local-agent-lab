@@ -1,0 +1,42 @@
+{
+  "schema": "ncma-environment-observation-v1",
+  "observed_utc": "2026-10-31T21:25:05.239946+00:00",
+  "execution_host": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "python": "3.12.14",
+    "mem_total_kib": 10206472,
+    "tools_present": {
+      "python3": true,
+      "git": true,
+      "gcc": true,
+      "g++": true,
+      "cmake": false,
+      "nvidia-smi": false,
+      "llama-server": false,
+      "llama-cli": false
+    },
+    "nvidia_devices_found": false
+  },
+  "loopback_health_probes": {
+    "18991": {
+      "error_type": "URLError",
+      "available": false
+    },
+    "8080": {
+      "error_type": "URLError",
+      "available": false
+    }
+  },
+  "remote_access": {
+    "ncma_direct_health": "MCP -32603 Internal error",
+    "ncma_direct_dev_lease_status": "MCP -32603 Internal error",
+    "windows_git_state": "NOT_OBSERVED",
+    "windows_runtime": "NOT_OBSERVED",
+    "oci_runtime": "NOT_OBSERVED"
+  },
+  "models_downloaded": false,
+  "upstream_code_executed": false,
+  "llm_performance_results": null,
+  "note": "This execution host is not the Windows Ryzen/RTX reference; absence here does not characterize remote machines."
+}

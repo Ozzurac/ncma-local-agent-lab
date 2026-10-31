@@ -1,0 +1,239 @@
+{
+  "schema": "ncma-deepinfer-validation-v1",
+  "date_utc": "2026-10-31T21:27:39.044704+00:00",
+  "base_commit": "8e2306c2edc7d3e1c54fb34fe6874f2d84266806",
+  "initial_python_suite": {
+    "tests": 15,
+    "exit_code": 0,
+    "stage": "before any tracked edit"
+  },
+  "final_python_suite": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "tests": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "cases": [
+      {
+        "test": "test_backend_result_checker.VerifyFreshBackendResultTests.test_duplicate_case_fails",
+        "status": "ok"
+      },
+      {
+        "test": "test_backend_result_checker.VerifyFreshBackendResultTests.test_missing_result_reports_nonzero",
+        "status": "ok"
+      },
+      {
+        "test": "test_backend_result_checker.VerifyFreshBackendResultTests.test_modified_terminal_fails",
+        "status": "ok"
+      },
+      {
+        "test": "test_backend_result_checker.VerifyFreshBackendResultTests.test_published_reference_matches",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_ab_uses_same_tokens_balanced_order_and_fresh_priming",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_context_declaration_checked",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_different_generation_budget_rejected_and_recorded",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_http_errors_retained_without_raw_url",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_missing_final_rejected",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_missing_hit_is_negative_evidence",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_missing_timing_not_silently_replaced_with_zero",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_multiple_slots_rejected_before_generation",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_overflow_rejected_before_generation",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_probe_is_read_only_and_never_overwrites",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_redirect_rejected",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_slot_save_erase_restore_order",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ContractTests.test_truncated_context_rejected",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ValidationTests.test_digest_stable_and_sensitive_to_order",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ValidationTests.test_loopback_urls",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ValidationTests.test_metadata_requires_identity_and_consistent_batch",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ValidationTests.test_remote_credentials_paths_and_dns_rejected",
+        "status": "ok"
+      },
+      {
+        "test": "test_deepinfer_prefix_bench.ValidationTests.test_warmup_not_in_summary",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_all_22_round_evidence_files_match_checkpoint",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_bad_revision_is_rejected",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_checkpoint_integrity_and_completion",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_corpus_digest_and_structure",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_every_path_hop_has_matching_authoritative_source",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_generator_reproduces_the_original_corpus",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_honest_monolithic_and_hybrid_reports",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_models_and_execution_binaries_are_excluded",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_publication_manifest_matches_committed_git_blobs",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_relevant_reference_modules_exist",
+        "status": "ok"
+      },
+      {
+        "test": "test_published_evidence.TestPublishedEvidence.test_twelve_results_match_all_sixty_fields",
+        "status": "ok"
+      }
+    ]
+  },
+  "additional_commands": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "experiments/g3",
+        "experiments/deepinfer"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "test",
+        "--prefix",
+        "experiments/openai-agents-sdk"
+      ],
+      "exit_code": 0,
+      "tests_discovered": 0,
+      "status": "NO_TESTS_DISCOVERED",
+      "note": "Node test runner output reports tests 0; not a validation success"
+    }
+  ],
+  "source_verification": {
+    "status": "VERIFIED_SOURCE_BYTES",
+    "files_verified": 74,
+    "source_lock_sha256": "18c6b4c5823a8ec2f179384c3af5be50df92e9cc54a9d80b542600d38e7b86a3"
+  },
+  "verified_code_sha256": {
+    "experiments/deepinfer/prefix_bench.py": "77043696dd1659e1e4d5375c36f879309ae3b1af45dad33a52a1fcac159b30ea",
+    "experiments/deepinfer/verify_sources.py": "0e8189163855b93b6b560ce754806bd688940edd4a374c1e81bbc309553011b6",
+    "tests/test_deepinfer_prefix_bench.py": "732ba4ad9e01c9ab9dd8096b788d5a38e699b3c5e790f89fc01a895f71612d9b"
+  },
+  "preserved_negative_evidence": [
+    {
+      "operation": "runtime health probe",
+      "result": "URLError / connection refused",
+      "exit_code": 2
+    },
+    {
+      "operation": "NCMA Direct health and lease status",
+      "result": "MCP -32603 Internal error; remote Windows/OCI not inspected"
+    },
+    {
+      "operation": "intermediate source verification output write",
+      "result": "FileNotFoundError because output parent directory was missing",
+      "resolution": "Verifier now creates parent directories; final 74-file verification succeeded"
+    },
+    {
+      "operation": "historical SDK npm test",
+      "result": "Exit 0 but zero tests discovered"
+    }
+  ],
+  "llm_performance_measured": false,
+  "contract_fixture_is_llm": false,
+  "upstream_tests_executed": false,
+  "publication_review": {
+    "command": [
+      "python",
+      "scripts/scan_publication.py"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "files_reviewed": 134,
+    "bytes_reviewed": 714515,
+    "issues": [],
+    "manual_review": "Only new research, experiment, test and sanitized evidence paths; no upstream source trees, weights, binary snapshots, credentials, personal host paths or raw host logs selected. Existing benchmark blobs unchanged."
+  }
+}
